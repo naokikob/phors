@@ -1,0 +1,15 @@
+/*
+Example 2.8 (for randomized algoritm)
+*/
+S = 0.5 * Det(1,0) + 0.5 * Forall(0,1,1,0). 
+Avg1(p1,p2;q1,q2) = 0.5 * p1 + 0.5 * q1.
+Avg2(p1,p2;q1,q2) = 0.5 * p2 + 0.5 * q2.
+Det(p1,p2) = p1 + p2 * Det(p1,p2).
+Forall (p1,p2;q1,q2) = 0.5 * Det(Avg1(p1,p2,q1,q2),Avg2(p1,p2,q1,q2))
+ + 0.25 * Forall(p1,p2,Avg1(p1,p2,q1,q2),Avg2(p1,p2,q1,q2))
+  + 0.25 * Forall(Avg1(p1,p2,q1,q2),Avg2(p1,p2,q1,q2),q1,q2).
+
+
+
+
+

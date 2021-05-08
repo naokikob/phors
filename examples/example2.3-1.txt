@@ -1,0 +1,8 @@
+/*
+order-1 fixpoint characterization of Example 2.3 (where p=0.25)
+S = F e.
+F x = x +_p F(F x).
+*/
+
+S = F(1).
+F(x) = 0.25 * x + 0.75 * F(F(x)).
