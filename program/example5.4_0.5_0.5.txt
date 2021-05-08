@@ -1,3 +1,0 @@
-S = F(0.5, 0.5).
-F(x1,x2) = x1 + x2*Square(F(x1,x2)).
-Square(x) = x * x.

@@ -1,6 +1,0 @@
-/* variant of S=S*S + 0.4*S + 0.09.
-   this is more convenient for least fixpoint computation
-*/
-
-S = F(S).
-F(x) = x*x + 0.4*x + 0.09.

@@ -1,9 +1,0 @@
-/*
-variation of Example 2.3, derived from
-S = F Id halt.
-Id z = z.
-F f z = (f z) +_{0.25} + F(F(F(Twice f))) z.
-Twice f z = f(f z).
-*/
-S=F(1).
-F(x) = 0.25 * x + 0.75*F(F(F(x*x))).
