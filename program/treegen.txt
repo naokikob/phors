@@ -1,0 +1,17 @@
+/*
+order-1 fixpoint characterization of the treegen example.
+The original equations are order-2.
+S = Treegen Boolgen 1.
+Boolgen k = k.
+Treegen f k = 0.5 * k + 0.5 * f(Treegen f (Treegen f (Treegen f k))).
+By specializing Treegen for f=Boolgen, we obtain
+the equations below
+*/
+S = TreegenBool(1).
+TreegenBool(k) = 0.5 * k + 0.5 * Boolgen(TreegenBool(TreegenBool(TreegenBool(k)))).
+Boolgen(k) = k.
+
+
+
+
+

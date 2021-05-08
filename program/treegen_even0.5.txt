@@ -1,0 +1,24 @@
+/*
+order-0 fixpoint characterization of a tree generator example.
+
+type 'a tree = L of 'a | N of 'a tree * 'a tree
+let gen_bool () =  if flip_coin() then true else false
+let gen_tree f () = if flip_coin() then L(f())
+                             else N(gen_tree f (), gen_tree f ())
+
+The probability that gen_tree(gen_bool) generates an even number of leaves
+is reduced to the termination probability of the following PHORS.
+
+Gen_bool k =  k +_0.5 k 
+Gen_tree f k0 k1  = 
+      (f k1) +_0.5 (Gen_tree f (Gen_tree  f k0 k1) (Gen_tree f k1 k0))
+S = Gen_tree Gen_bool e Omega
+
+which can be chracterized by the fixpoint equations below.
+*/
+S0 = 0.5 * S0 * S0 + 0.5 * S1 * S1.
+S1 = 0.5 + S0 * S1.
+
+%FGROUP
+(S0 S1)
+

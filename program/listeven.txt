@@ -1,0 +1,13 @@
+/*
+Fixpoint characterization of the probability that listgen generates a list of even length
+(Example 2.7).
+*/
+S = ListEvenBool(1).
+Boolgen(k)=k.
+ListEvenBool(k) = 0.5 * k + 0.5 * ListOddBool(k).
+ListOddBool(k) = 0.5 * ListEvenBool(k).
+
+
+
+
+

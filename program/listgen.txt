@@ -1,0 +1,17 @@
+/*
+Fixpoint characterization of the listgen example.
+The original equations are order-2.
+S = Listgen (Listgen Boolgen) 1.
+Boolgen k = k.
+Listgen f k = 0.5 * k + 0.5 * f(Listgen f k).
+By specializing Listgen for f=Listgen Boolgen and f=Boolgen, we obtain
+the equations below
+*/
+S = ListgenListgen(1).
+ListgenListgen(k) = 0.5 * k + 0.5 * ListgenBoolgen(ListgenListgen(k)).
+ListgenBoolgen(k) = 0.5 * k + 0.5 * ListgenBoolgen(k).
+
+
+
+
+

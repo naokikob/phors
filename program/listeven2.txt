@@ -1,0 +1,13 @@
+/*
+Fixpoint characterization of the probability that listgen generates a list that contains
+an even number of true's.
+(Example 2.7).
+*/
+S = ListEven(0.5,0.5).
+ListEven(p1,p2) = 0.5 + 0.5 * (p1 * ListOdd(p1,p2) + p2* ListEven(p1,p2)).
+ListOdd(p1,p2) = 0.5 * (p1 * ListEven(p1,p2) + p2* ListOdd(p1,p2)).
+
+
+
+
+

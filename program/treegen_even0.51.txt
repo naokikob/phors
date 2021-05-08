@@ -1,0 +1,8 @@
+/* A variation of treegen_even0.5.txt, where flip_coin is biased */
+
+S0 = 0.49 * S0 * S0 + 0.49 * S1 * S1.
+S1 = 0.51 + 0.98 * S0 * S1.
+
+%FGROUP
+(S0 S1) 
+
